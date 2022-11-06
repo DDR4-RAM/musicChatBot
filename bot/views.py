@@ -11,12 +11,12 @@ from django.template import loader
 chatterbot = ChatBot('Bot de Musica')
 trainer = ChatterBotCorpusTrainer(chatterbot)
 trainer_list = ListTrainer(chatterbot)
-trainer.train("chatterbot.corpus.spanish")
+# trainer.train("chatterbot.corpus.spanish")
 trainer.export_for_training('export.yml')
 
 trainer_list.train([
     "musica",
-    "Te gusta la musica",
+    "Te gusta la musica?",
 ])
 
 trainer_list.train([
