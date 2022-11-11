@@ -68,7 +68,7 @@ div.musicbot {
   align-self: flex-start;
   background-color: rgb(17 108 200);
   color: #fff;
-  border-radius: 20px 20px 20px 5px;
+  border-radius: 5px 20px 20px 20px;
   position: relative;
   word-break: break-all;
 }
@@ -77,7 +77,7 @@ div.user {
   align-self: flex-end;
   background-color: rgb(123, 136, 149);
   color: #fff;
-  border-radius: 20px 20px 5px 20px;
+  border-radius: 20px 5px 20px 20px;
   position: relative;
   word-break: break-all;
 }

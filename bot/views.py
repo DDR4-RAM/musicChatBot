@@ -158,7 +158,7 @@ def send_message(request):
             print(f"[I] response <{response}>")
             conversation[str(new_length + 1)] = str(response)
             messages = {
-                'length': new_length + 1,
+                'length': new_length,
                 'conversation': conversation,
             }
             print(messages)
