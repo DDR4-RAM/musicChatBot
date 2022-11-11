@@ -167,7 +167,7 @@ def send_message(request):
         print('[I] GET')
         template = loader.get_template('index.html')
         conversation = {
-            '1': 'Hola, soy MusicBot. ¡Puedes hacerme cualquier pregunta sobre música! 😄',
+            '1': 'Hola, soy MusicBot. ¡Puedes hacerme cualquier pregunta sobre música! Prueba con "quién fue Michael Jackson?" 😄',
         }
         messages = {
             'length': 1,
