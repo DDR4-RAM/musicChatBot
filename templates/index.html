@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'style.css' %}">
     {% load mathfilters %}
     <title>CHATBOT</title>
 </head>
 <body>
 <div id='chatborder'>
-    <form action="/bot/conversation" method="post">
-        <input name='length' type="number" value="{{ length }}" readonly hidden>
-        {% for key, item in conversation.items %}
-            {% if key|mod:2 == 0 %}
-                <input type="text" value="{{ item }}" name="message{{ key }}" style="color: green" size="100" readonly>
-                <br>
-            {% else %}
-                <input type="text" value="{{ item }}" name="message{{ key }}" style="color: blue" size="100" readonly>
-                <br>
-            {% endif %}
-        {% endfor %}
+    <div class="chatbot-title">
+        <h1>MusicBot 🤖🎶</h1>
+    </div>
+    <form action="/bot/" method="post">
+        <div id='chatmessages'>
+            <input name='length' type="number" value="{{ length }}" hidden>
+            {% for key, item in conversation.items %}
+                {% if key|mod:2 == 0 %}
+                    <div class="user">
+                        <h4>Tú</h4>
+                        <input type="text" value="{{ item }}" name="message{{ key }}" hidden>
+                        <p>{{ item }}</p>
+                    </div>
+                {% else %}
+                    <div class="musicbot">
+                        <h4>MusicBot</h4>
+                        <input type="text" value="{{ item }}" name="message{{ key }}" hidden>
+                        <p>{{ item }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
         {% csrf_token %}
-        <input type="text" name="user_text" id="chatbox" size="50" placeholder="Hi there! Type here to talk to me.">
-        <input type="submit" value="Enviar">
+        <div id="chatinput">
+            <input type="text" name="user_text" id="chatbox" size="50" placeholder="Recomiéndame una canción">
+            <input id="submit-button" type="submit" value="Enviar">
+        </div>
     </form>
 </div>
 </body>
-</html>
