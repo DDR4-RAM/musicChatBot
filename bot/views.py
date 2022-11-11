@@ -138,9 +138,9 @@ def send_message(request):
         print("[I] POST")
         template = loader.get_template('index.html')
         if request.POST.get('length', '') == '1':
-            conversation = {'1': request.POST.get('message1', ''), '2': 'YOU: ' + request.POST.get('user_text', ''), }
+            conversation = {'1': request.POST.get('message1', ''), '2': request.POST.get('user_text', ''), }
             response = chatterbot.get_response(request.POST.get('user_text', ''))
-            conversation['3'] = 'BOT: ' + str(response)
+            conversation['3'] = str(response)
             messages = {
                 'length': '2',
                 'conversation': conversation,
@@ -152,11 +152,11 @@ def send_message(request):
                 if request.POST.get('message' + str(index + 1), '') != '':
                     conversation[str(index + 1)] = request.POST.get('message' + str(index + 1), '')
             new_length = int(request.POST.get('length', '')) + 2
-            conversation[str(new_length)] = 'YOU: ' + request.POST.get('user_text', '')
+            conversation[str(new_length)] = 'YOU:\n' + request.POST.get('user_text', '')
             print(f"[O] TRAINER <{request.POST.get('user_text', '')}>")
             response = chatterbot.get_response(request.POST.get('user_text', ''))
             print(f"[I] response <{response}>")
-            conversation[str(new_length + 1)] = 'BOT: ' + str(response)
+            conversation[str(new_length + 1)] = str(response)
             messages = {
                 'length': new_length + 1,
                 'conversation': conversation,
@@ -167,7 +167,7 @@ def send_message(request):
         print('[I] GET')
         template = loader.get_template('index.html')
         conversation = {
-            '1': 'BOT: Hola, ¿te gustaría saber de musica?',
+            '1': 'Hola, ¿te gustaría saber de musica?',
         }
         messages = {
             'length': 1,
