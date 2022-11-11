@@ -129,7 +129,7 @@ trainer_list.train([
     "Para qué sirve Parental Advisor?",
     "Parental Advisory: Explicit Content es una etiqueta de clasificación pegada por la Asociación de Industria Magnetofónica de América en muchos álbumes de estudio de artistas y grupos musicales que presentan lenguaje soez.",
     "quién inventó el tocadiscos?",
-    "en 1877, Thomas Alva Edison patentó el fonógrafo, un invento capaz de grabar y reproducir posteriormente los sonidos que se grababan sobre cilindros.\nPero las cosas no pararían ahí, en 1883 los científicos Chichester Alexander Bell, su primo Alexander Graham Bell y su socio Charles Tainter mejoraron el fonógrafo de Edison dando paso al grafófono y crearon la Volta Graphophone Company en 1886.\nDos años después otro avance llegó con la astucia de Emile Berliner, que llamó a su mejora gramófono, éste era capaz de trabajar con un disco de goma vulcanizada de 5” y era impulsado de forma manual.",
+    "En 1877, Thomas Alva Edison patentó el fonógrafo, un invento capaz de grabar y reproducir posteriormente los sonidos que se grababan sobre cilindros.\nPero las cosas no pararían ahí, en 1883 los científicos Chichester Alexander Bell, su primo Alexander Graham Bell y su socio Charles Tainter mejoraron el fonógrafo de Edison dando paso al grafófono y crearon la Volta Graphophone Company en 1886.\nDos años después otro avance llegó con la astucia de Emile Berliner, que llamó a su mejora gramófono, éste era capaz de trabajar con un disco de goma vulcanizada de 5” y era impulsado de forma manual.",
 ])
 
 
@@ -152,7 +152,7 @@ def send_message(request):
                 if request.POST.get('message' + str(index + 1), '') != '':
                     conversation[str(index + 1)] = request.POST.get('message' + str(index + 1), '')
             new_length = int(request.POST.get('length', '')) + 2
-            conversation[str(new_length)] = 'YOU:\n' + request.POST.get('user_text', '')
+            conversation[str(new_length)] = request.POST.get('user_text', '')
             print(f"[O] TRAINER <{request.POST.get('user_text', '')}>")
             response = chatterbot.get_response(request.POST.get('user_text', ''))
             print(f"[I] response <{response}>")
@@ -167,7 +167,7 @@ def send_message(request):
         print('[I] GET')
         template = loader.get_template('index.html')
         conversation = {
-            '1': 'Hola, ¿te gustaría saber de musica?',
+            '1': 'Hola, soy MusicBot. ¡Puedes hacerme cualquier pregunta sobre música! 😄',
         }
         messages = {
             'length': 1,
