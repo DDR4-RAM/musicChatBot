@@ -48,7 +48,7 @@ div.chatbot-title {
 }
 
 form {
-  height: 100%;
+  height: calc(100% - 92.4px);
   width: 100%;
   display: grid;
   grid-template-rows: 5fr 1fr;
