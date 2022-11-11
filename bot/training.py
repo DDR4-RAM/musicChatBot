@@ -15,7 +15,6 @@ class Trainer:
         self.trainer.export_for_training('export.yml')
 
         self.trainer_list.train([
-<<<<<<< HEAD
             "musica",
             "Te gusta la musica",
         ])
@@ -23,7 +22,6 @@ class Trainer:
         self.trainer_list.train([
             "musica",
             "me gusta el genero rock, a tí?",
-=======
             "quiénes son Los Beatles?",
             "Una banda inglesa muy popular en los 60's",
             "conoces alguna canción de tiktok?",
@@ -132,7 +130,6 @@ class Trainer:
             "Parental Advisory: Explicit Content es una etiqueta de clasificación pegada por la Asociación de Industria Magnetofónica de América en muchos álbumes de estudio de artistas y grupos musicales que presentan lenguaje soez.",
             "quién inventó el tocadiscos?",
             "en 1877, Thomas Alva Edison patentó el fonógrafo, un invento capaz de grabar y reproducir posteriormente los sonidos que se grababan sobre cilindros.\nPero las cosas no pararían ahí, en 1883 los científicos Chichester Alexander Bell, su primo Alexander Graham Bell y su socio Charles Tainter mejoraron el fonógrafo de Edison dando paso al grafófono y crearon la Volta Graphophone Company en 1886.\nDos años después otro avance llegó con la astucia de Emile Berliner, que llamó a su mejora gramófono, éste era capaz de trabajar con un disco de goma vulcanizada de 5” y era impulsado de forma manual.",
->>>>>>> master
         ])
         # self.trainer.train([
         #    "Greetings!",
