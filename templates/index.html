@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'bot/style.css' %}">
+    {% load mathfilters %}
+    <title>CHATBOT</title>
+</head>
+<body>
+<div id='chatborder'>
+    <form action="/bot/" method="post">
+        <div id='chatmessages'>
+            <input class="musicbot" name='length' type="number" value="{{ length }}" hidden>
+            {% for key, item in conversation.items %}
+                {% if key|mod:2 == 0 %}
+                    <input class="user" type="text" value="{{ item }}" name="message{{ key }}">
+                {% else %}
+                    <input class="musicbot" type="text" value="{{ item }}" name="message{{ key }}" >
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% csrf_token %}
+        <div id="chatinput">
+            <input type="text" name="user_text" id="chatbox" size="50" placeholder="Hi there! Type here to talk to me.">
+            <input id="submit-button" type="submit" value="Enviar">
+        </div>
+    </form>
+</div>
+</body>
+</html>
