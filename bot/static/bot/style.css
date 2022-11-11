@@ -34,7 +34,7 @@ div#chatborder {
   max-width: 720px;
   overflow: hidden;
   margin: 50px auto;
-  height: calc(100vh - 141px);
+  height: calc(100vh - 100px);
   min-height: 500px;
   background-color: #f9f9f9;
   box-shadow: 0px 0px 15px rgb(128 128 128 / 50%);
