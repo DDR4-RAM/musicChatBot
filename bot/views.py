@@ -4,13 +4,6 @@ from chatterbot.ext.django_chatterbot import settings
 from .training import Trainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
-from rdflib import Graph, URIRef
-from rdflib.namespace import RDFS, SKOS
-
-g = Graph()
-g.parse('https://www.wikidata.org/wiki/Special:EntityData/Q2831.ttl')
-
-print(f'GRAPH LENGTH: {len(g)}')
 
 # Create your views here.
 from django.template import loader
@@ -153,8 +146,10 @@ def send_message(request):
         print("[I] POST")
         template = loader.get_template('index.html')
         if request.POST.get('length', '') == '1':
-            conversation = {'1': request.POST.get('message1', ''), '2': request.POST.get('user_text', ''), }
-            response = chatterbot.get_response(request.POST.get('user_text', ''))
+            conversation = {'1': request.POST.get('message1', ''),
+                            '2': Validator(request.POST.get('user_text', '')).clean_input(), }
+            response = chatBot.get_response(Validator(request.POST.get('user_text', '')).clean_input())
+            check_onthology(request.POST.get('user_text', ''))
             conversation['3'] = str(response)
             messages = {
                 'length': '2',
@@ -168,8 +163,12 @@ def send_message(request):
                     conversation[str(index + 1)] = request.POST.get('message' + str(index + 1), '')
             new_length = int(request.POST.get('length', '')) + 2
             conversation[str(new_length)] = request.POST.get('user_text', '')
-            print(f"[O] TRAINER <{request.POST.get('user_text', '')}>")
-            response = chatterbot.get_response(request.POST.get('user_text', ''))
+            print(f"[O] TRAINER <{Validator(request.POST.get('user_text', '')).clean_input()}>")
+            value_ontho = check_ontology(Validator(request.POST.get('user_text', '')).clean_input())
+            if value_ontho == 1:
+                response = "Te gustaría saber de música?"
+            else:
+                response = chatBot.get_response(Validator(request.POST.get('user_text', '')).clean_input())
             print(f"[I] response <{response}>")
             conversation[str(new_length + 1)] = str(response)
             messages = {
