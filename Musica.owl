@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/charl/ontologies/2023/0/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/charl/ontologies/2023/0/untitled-ontology-8"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:music_onto="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuestaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuestaPor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuestaPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuso">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#compuso"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contieneA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contieneA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contieneA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contieneA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contuvoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contuvoA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#contuvoA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#perteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#perteneceA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#perteneceA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#perteneceA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#perteneceA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#pertenecioA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#pertenecioA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#pertenecioA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#produjo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#produjo">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#produjo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#produjo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocaUn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocaUn">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocaUn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocadoPor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#tocadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Descripcion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Duracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Duracion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ElementoVibrante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ElementoVibrante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#FechaDeComposicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#FechaDeComposicion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Forma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Forma">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Material -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Material">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Nombre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#NumeroDeCuerdas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#NumeroDeCuerdas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Soplo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Soplo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TipoDeCuerda -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TipoDeCuerda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoMusical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Acordeon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Acordeon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+        <music_onto:Nombre>Acordeon</music_onto:Nombre>
+        <music_onto:Soplo>Indirecto</music_onto:Soplo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <music_onto:compuestaPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Pop"/>
+        <music_onto:Duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:07 minutos</music_onto:Duracion>
+        <music_onto:FechaDeComposicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07-09-1987</music_onto:FechaDeComposicion>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Album"/>
+        <music_onto:compuestaPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson"/>
+        <music_onto:contieneA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad"/>
+        <music_onto:contieneA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#SmoothCriminal"/>
+        <music_onto:contieneA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheWayYouMakeMeFeel"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords"/>
+        <music_onto:Duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48:13 minutos</music_onto:Duracion>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Chopin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Chopin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+        <music_onto:compuso rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Nocturnes"/>
+        <music_onto:tocaUn rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Piano"/>
+        <music_onto:Nombre>Frédéric Chopin</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Clasica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Clasica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical"/>
+        <music_onto:Nombre>Clasica</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasBinario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasBinario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo"/>
+        <music_onto:Nombre>CompasBinario</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasCuaternario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasCuaternario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo"/>
+        <music_onto:Nombre>CompasCuaternario</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasTernario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasTernario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo"/>
+        <music_onto:Nombre>CompasTernario</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasesAmalgama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#CompasesAmalgama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Ritmo"/>
+        <music_onto:Nombre>CompasesAmalgama</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#DancePop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#DancePop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DancePop</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Discografica"/>
+        <music_onto:produjo rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad"/>
+        <music_onto:produjo rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album"/>
+        <music_onto:produjo rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#SmoothCriminal"/>
+        <music_onto:produjo rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheWayYouMakeMeFeel"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EpicRecords</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Flauta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Flauta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+        <music_onto:Material>Madera</music_onto:Material>
+        <music_onto:Nombre>Flauta</music_onto:Nombre>
+        <music_onto:Soplo>Directo</music_onto:Soplo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Gong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Gong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>Gong</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Guitarra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Guitarra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+        <music_onto:NumeroDeCuerdas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</music_onto:NumeroDeCuerdas>
+        <music_onto:TipoDeCuerda>Cuerda Pulsada</music_onto:TipoDeCuerda>
+        <music_onto:TipoDeCuerda>Guitarra</music_onto:TipoDeCuerda>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+        <music_onto:compuso rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad"/>
+        <music_onto:compuso rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album"/>
+        <music_onto:compuso rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#SmoothCriminal"/>
+        <music_onto:pertenecioA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords"/>
+        <music_onto:pertenecioA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheJackson5"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MichealJackson</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Nocturnes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Nocturnes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <music_onto:compuestaPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Chopin"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Clasica"/>
+        <music_onto:FechaDeComposicion>Entre 1827 y 1846</music_onto:FechaDeComposicion>
+        <music_onto:Nombre>Nocturnes</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Piano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Piano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+        <music_onto:NumeroDeCuerdas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">230</music_onto:NumeroDeCuerdas>
+        <music_onto:TipoDeCuerda>Cuerda Percutida</music_onto:TipoDeCuerda>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Platillos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Platillos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+        <music_onto:ElementoVibrante>Placas</music_onto:ElementoVibrante>
+        <music_onto:Nombre>Platillos</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pop</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Queen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Queen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Musico"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#RelojDespertador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#RelojDespertador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>RelojDespertador</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#GeneroMusical"/>
+        <music_onto:Nombre>Rock</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#SmoothCriminal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#SmoothCriminal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <music_onto:compuestaPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#DancePop"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords"/>
+        <music_onto:Duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:17 minutos</music_onto:Duracion>
+        <music_onto:FechaDeComposicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14-11-1988</music_onto:FechaDeComposicion>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smooth Criminal</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tambor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tambor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+        <music_onto:ElementoVibrante>Membrana</music_onto:ElementoVibrante>
+        <music_onto:Forma rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cónica</music_onto:Forma>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tambor</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheJackson5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheJackson5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Banda"/>
+        <music_onto:contuvoA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson"/>
+        <music_onto:Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Jackson 5</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheWayYouMakeMeFeel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TheWayYouMakeMeFeel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#ComposicionMusical"/>
+        <music_onto:compuestaPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#MichealJackson"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Bad_Album"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#DancePop"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#EpicRecords"/>
+        <music_onto:perteneceA rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Pop"/>
+        <music_onto:Duracion>4:58 minutos</music_onto:Duracion>
+        <music_onto:FechaDeComposicion>9 de noviembre de 1987</music_onto:FechaDeComposicion>
+        <music_onto:Nombre>The Way You Make Me Feel</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoAlterno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoAlterno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>TonoAlterno</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoAscendente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoAscendente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>TonoAscendente</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoContinuo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoContinuo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>Tono Continuo</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoDescendente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoDescendente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>TonoDescendente</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoLentoAscendente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoLentoAscendente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>Tono Lento Ascendente</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoPulsante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#TonoPulsante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Tono"/>
+        <music_onto:Nombre>Tono Pulsante</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Triangulo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Triangulo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDePercusion"/>
+        <music_onto:ElementoVibrante>Varilla</music_onto:ElementoVibrante>
+        <music_onto:Nombre>Varilla</music_onto:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Trompeta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Trompeta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeViento"/>
+        <music_onto:Material>Metal</music_onto:Material>
+        <music_onto:Nombre>Trompeta</music_onto:Nombre>
+        <music_onto:Soplo>Directo</music_onto:Soplo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Violin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Violin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#InstrumentoDeCuerda"/>
+        <music_onto:tocadoPor rdf:resource="http://www.semanticweb.org/charl/ontologies/2023/0/music_onto#Chopin"/>
+        <music_onto:Nombre>Violin</music_onto:Nombre>
+        <music_onto:NumeroDeCuerdas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</music_onto:NumeroDeCuerdas>
+        <music_onto:TipoDeCuerda>Cuerda Frotada</music_onto:TipoDeCuerda>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
